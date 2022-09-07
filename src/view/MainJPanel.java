@@ -70,9 +70,25 @@ public class MainJPanel extends JPanel {
      * @return texto de la operacion
      */
     public String getData(){
-        
+        String operator = "";
+        switch (operations.getSelectedItem().toString()) {
+            case "+":
+                operator = "s";
+                break;
+            case "-":
+                operator = "r";
+                break;
+            case "*":
+                operator = "m";
+                break;
+            case "/":
+                operator = "d";
+                break;
+            default:
+                break;
+        }
         String text = ""+num1_1.getText() + i1.getText() + num1_2.getText() 
-            + operations.getSelectedItem() + num2_1.getText() + i2.getText() +  num2_2.getText();
+            + operator + num2_1.getText() + i2.getText() +  num2_2.getText();
         System.out.println(text);
         return text;
     }

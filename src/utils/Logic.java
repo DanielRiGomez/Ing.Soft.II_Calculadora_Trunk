@@ -1,12 +1,7 @@
 package utils;
 
 public class Logic{
-    public Logic() {
-        Expression e1 = parseStringToExp("-3-2i^4");
-        Expression e2 = parseStringToExp("4-2i^3");
-        System.out.println(this.summ(e1, e2));
-    }
-    private Expression parseStringToExp(String expString){
+    public Expression parseStringToExp(String expString){
         int real=0, coefficient=0, exponent=0;
         String[] parts = expString.split("\\^|\\+|\\-");
         Expression r;
@@ -40,4 +35,14 @@ public class Logic{
     public Expression substract(Expression e1, Expression e2){
         return new Expression(e1.real - e2.real, e1.coefficient-e2.coefficient,1);
     }
+
+    public Expression multiply(Expression e1, Expression e2){
+        //TODO implementación de la multiplicación
+        return new Expression(1,1,1);
+    }
+    public Expression divide(Expression e1, Expression e2){
+        //TODO implementación de la división
+        return new Expression(1,1,1);
+    }
+
 }
